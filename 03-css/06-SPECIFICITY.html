@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPECIFICITY</title>
+    <LINK rel="stylesheet" href="css/master.css">
+        <style>
+/* specificity: o,0,1 = 1 */
+svg {
+    display: block;
+    margin: 10px auto;
+    width: 18rem;
+}
+/* specificity: 0,1,1 = 11 */
+svg.icon {
+    color: rgb(132, 6, 170) !important;
+} 
+/* specifity: 0,1,2 = 12 */
+section svg.icon {
+    color: red;
+}
+        </style>
+</head>
+<body>
+    <main>
+        <header>
+            <H1><a href="INDEX.HTML">⬅</a>SPECIFICITY</H1>
+            
+        </header>
+        <section>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASIC-SELECTORS</title>
+    <LINK rel="stylesheet" href="css/master.css">
+        <style>
+            /* universal -------------*/
+           section * {
+                border: 1px solid rgb(203, 8, 241);
+                padding: 10px;
+            }
+            /* type ---------*/
+            ul{
+                list-style: none;
+            }
+            li{
+                font-size: 1.5rem;
+            }
+            /* descending-------*/
+            ul li {
+                background-color: aqua;
+                color: rgb(136, 0, 226);
+            }
+            /*class------*/
+            .upper {
+                text-transform: uppercase;
+
+            }
+            .underline {
+                text-decoration: underline;
+            }
+            /*identification-------*/
+            #important {
+                background-color: rgb(255, 255, 255);
+                font-weight: 500;
+            }
+            /*combine--------------*/
+            section ul.animes li#important {
+                color: firebrick;
+            }
+        </style>
+</head>
+<body>
+    <main>
+        <header>
+            <H1><a href="INDEX.HTML">⬅</a>BASIC-SELECTORS</H1>
+            
+        </header>
+        <section>
+            <ul class="animes">
+                <li class="upper underline">AranjueZ</li>
+                <li id="important">el tio de jymmi lo toca</li>
+                <li>solo O11CE</li>
+                <li>la mama de grizales</li>
+               
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

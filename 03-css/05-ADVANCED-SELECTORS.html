@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADVANCED-SELECTORS</title>
+    <LINK rel="stylesheet" href="css/master.css">
+        <style>
+            /* children---------*/
+            p > span {
+                background-color: aqua;
+                padding: 10px;
+            }
+            /*adjacent----------*/
+            h2 + h3 + h3 {
+                background-color: aqua;
+                padding: 10px;
+            }
+            /*attributes----------*/
+            a[target] {
+                background-color: aquamarine;
+                padding: 10px;
+            }
+
+
+
+
+        </style>
+</head>
+<body>
+    <main>
+        <header>
+            <H1><a href="INDEX.HTML">⬅</a>ADVANCED-SELECTORS</H1>
+            
+        </header>
+        <SEction>
+            <h2>CHILDREN</h2>
+            <p>
+                <span>PARAGRAPH ONE</span>
+            </p>
+            <p> <i>
+                <span>PARAGRAPH TWO</span>
+            </i>
+            </p>
+            <h2>ADJACENT</h2>
+            <h3>LOREM IPSUM DOLOR</h3>
+            <h3>LOREM IPSUM DOLOR</h3>
+            <h2>ATRIBUTES:</h2>
+            <a href="https://www.youtube.com">GO TO YOUTUBE</a> |
+            <a href="https://www.friv.com/" target="_blank">GO TO FRIV</a> |
+            <a href="https://es-la.facebook.com/">GO TO FACEBOOK</a>
+        </SEction>
+    </main>
+</body>
+</html>
