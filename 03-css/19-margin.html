@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARGIN</title>
+    <LINK rel="stylesheet" href="css/master.css">
+        <style>
+            .bg {
+                background: linear-gradient(135deg,rgb(26, 138, 146) 10%,
+                transparent 0,
+                transparent 50%,
+                rgb(22, 116, 122) 0,
+                rgb(24, 109, 116) 60%,
+                transparent 0,
+                transparent
+                );
+                background-size: 7.07px 7.07px;
+            }
+            div.parent {
+                position: absolute;
+                height: 340px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 380px;
+                /*y axis (vertical) */
+                margin-top: 0;
+                mask-border: 0;
+                /* y axis (horizont)*/
+                margin-right: auto;
+                margin-left: auto;
+
+                /*shorthand margin: y x*/
+                margin: 0 auto;
+                width: 400px;
+            }
+            div.child {
+                background-color: rgb(124, 9, 255);
+                height: 200px;
+                font-size: 3rem;
+                text-align: center;
+                line-height: 12rem;
+                width: 200px;
+                /*------*/
+                margin-top: 65px;
+                margin-bottom: 65px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
+</head>
+<body>
+    <main>
+        <header>
+            <H1><a href="INDEX.HTML">⬅</a>MARGIN</H1>
+            
+        </header>
+        <section>
+            <div class="parent bg">
+                <div class="child">BOX😎</div> 
+            </div>
+            
+            </div>
+        </section>
+    </main>
+</body>
+</html>
