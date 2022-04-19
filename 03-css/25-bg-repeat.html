@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background repeat</title>
+    <LINK rel="stylesheet" href="css/master.css">
+</head>
+<body>
+    <main>
+        <header>
+            <H1><a href="INDEX.HTML">⬅</a>background repeat</H1>
+            <style>
+                h3{
+                    text-align: center;
+                    font-size: 2rem;
+                }
+                section div {
+                    background-color: rgb(172, 192, 192);
+                    background-image: url(images/oncecaldas.png);
+                    background-size: 10%;
+                    border: 2px solid rgb(255, 3, 3);
+                    height: 400px;
+                }
+                section div.box1{
+                    background-repeat: repeat;
+                }
+                section div.box2{
+                    background-repeat: no-repeat;
+                }section div.box3{
+                    background-repeat: repeat-x;
+                }section div.box4{
+                    background-position: center;
+                    background-repeat: repeat-y;
+                }
+            </style>
+        </header>
+        <section>
+            <h3>repeat</h3>
+            <div class="box1"></div>
+            <!---->
+            <h3>no repeat</h3>
+            <div class="box2"></div>
+            <!---->
+            <h3>repeat x</h3>
+            <div class="box3"></div>
+            <!---->
+            <h3>repeat y</h3>
+            <div class="box4"></div>
+        </section>
+    </main>
+</body>
+</html>
