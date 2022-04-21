@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSITION-absolute</title>
+    <LINK rel="stylesheet" href="css/master.css">
+        <style>
+            div.parentbox,
+            div.parentbox div
+            {
+                border: 2px solid rgb(255, 0, 0);
+                padding: 10px;
+
+            }
+            div.parentbox {
+                 margin: 0 auto;
+                 position: relative;
+                width: 360px;
+            }
+            div.parentbox div {
+                background-color: rgb(0, 255, 255,0.4);
+                display: inline-block;
+                font-size: 4rem;
+                text-align: center;
+                line-height: 4.5rem;
+                height: 76px;
+                margin: 8px;
+                width: 76px;
+            }
+            div.parentbox div.box4 {
+                
+                width: 318px;
+            }
+            div.parentbox div.box2 {
+                background-color: rgb(137, 229, 106,0.9);
+                position: absolute;
+                top: 50px;
+                left: 220px;
+            }
+            
+            
+        </style>
+</head>
+<body>
+    <main>
+        <header>
+            <H1><a href="INDEX.HTML">⬅</a>POSITION-ABSOLUTE</H1>
+            
+        </header>
+        <section>
+            
+            <div class="parentbox">
+                <div class="box1">🍑</div>
+                <div class="box2">🎂</div>
+                <div class="box3">🐱‍👤</div>
+                <div class="box4">🥓</div>
+            </div>
+           
+            
+    </main>
+</body>
+</html>
