@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>challenge</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap') ;
+        body {
+            font-family: ´poppins´ , sans-serif;
+            color: black;
+            
+            background-color: #17a053;
+            
+        }
+         main div.logo{background: url(images/sprite.png) no-repeat -22px -440px;
+            margin: 0;
+            
+            padding: 0px;
+            width: 180px;
+            height: 120px;
+            
+           
+           }
+        
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0 auto;
+            width: 80%;
+        }
+        header{
+            margin: 2rem;
+            margin-top: 130px;
+
+        }
+        header nav{
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+        }
+        header nav a:link,
+        header nav a:visited {
+        background-color:#2f5329;
+        color: rgb(255, 255, 255);
+        border-bottom: 8px solid rgb(255, 255, 255);
+        padding: 1rem 2rem;
+        text-decoration: none;
+        transition: all 0.2s ease-out;
+        }
+        
+        header nav a:hover {
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+           
+            border-bottom: 8px solid #fad000;
+        }
+        header nav a.active{
+            background-color: #2F5329;
+            color: #ffffff;
+            border-bottom: 8px solid rgb(255, 255, 255);
+        }
+        
+   
+     
+
+    main section.images div {
+        background: url(images/sprite.png) no-repeat -465px 87px;
+        
+        padding: 0px;
+            width: 350px;
+            height: 300px;
+            display: inline-block;
+            margin: -50px 10px 10px 10px;
+            cursor: pointer;
+          
+            
+        }
+        
+    main section.images{
+    background-color: #2f5329;
+    color: rgb(0, 0, 0);
+    margin: -200px;
+    margin-top: 100px;}
+     main section div h3 {
+         margin-top: 100px;
+         text-align: center;
+         
+         
+     }
+
+     main section.images div h3{
+         background-color: #ffffff3a;
+         width: 310px;
+         height: 50px;
+         padding: 12px;
+         margin-top: 25%;
+
+     }
+
+     main section.images div h3:hover{
+         background-color: #ffffffab;
+     }
+     main section.lorem div {
+         background: url(images/sprite.png) no-repeat;
+     }
+   main section.lorem1 div h3 {
+       background-color: #ffffff;
+       border: 10px solid #2F5329;
+       margin-top: 15%;
+       height: 70px;
+   }
+   main section.lorem2 div h3 {
+       background-color: #ffffff;
+       border: 10px solid #2F5329;
+       margin-top: -3%;
+       height: 70px;
+   }
+   main section.lorem3 div h3 {
+       background-color: #ffffff;
+       border: 10px solid #2F5329;
+       margin-top: -3%;
+       height: 70px;
+   }
+  
+    
+        </style>
+</head>
+<body>
+    <main>
+        <div class="logo">
+        <header>
+            <nav>
+                <a  href="/03-css/52-challenge-sprites.html">INICIO</a>
+                <a href="/03-css/52-challenge-sprites.html">NOSOTROS</a>
+                <a href="/03-css/52-challenge-sprites.html">PORTAFOLIO</a>
+                <a href="/03-css/52-challenge-sprites.html">SERVICIOS</a>
+                <a href="/03-css/52-challenge-sprites.html">CONTACTO</a>
+                
+            </div>
+
+                
+            </nav>
+            <section class="images">
+               <div>
+                   <h3>Sprite01</h3>
+               </div>
+               <div>
+                <h3>Sprite02</h3>
+            </div>
+            <div>
+                <h3>Sprite03</h3>
+            </div>
+        </section>
+       
+        <section class="lorem1">
+            <div> 
+                <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias optio nesciunt vel labore nisi quibusdam? Suscipit, nobis minima eaque temporibus ex distinctio mollitia odio autem animi illum fugit sequi aliquid.</h3>
+
+            </div>
+        </section>
+        <section class="lorem2">
+            <div> 
+                <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem odit dolorum, nostrum veniam iste sapiente obcaecati repellat dolorem expedita culpa architecto facilis voluptates aperiam. Obcaecati quos dignissimos tempora voluptate qui?</h3>
+
+            </div>
+        </section>
+        <section class="lorem3">
+            <div> 
+                <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet corporis minima at dolores pariatur reprehenderit, odio nesciunt consequatur, ratione commodi quidem labore nostrum quaerat quod repellendus asperiores, nam non natus.</h3>
+
+            </div>
+        </section>
+   
+        </header>
+    </main>
+
+</body>
+</html>
