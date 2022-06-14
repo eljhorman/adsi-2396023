@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARALLAX</title>
+    <LINK rel="stylesheet" href="css/master.css">
+        <style>
+            figure.parallax {
+                height: 576px;
+                overflow: hidden;
+                position: relative;
+                margin: 4rem auto;
+                width: 1024px;
+            }
+            figure.parallax div {
+                height: 567px;
+                position: absolute;
+                width: calc(1024px * 2);
+
+            }
+            div.layer8 {
+                background: url(imgs/parallax/layer_08.png) repeat-x;
+                z-index:1;
+                animation: animparallax 80s linear infinite;
+            }
+            div.layer7 {
+                background: url(imgs/parallax/layer_07.png) repeat-x;
+                z-index:2;
+                animation: animparallax 70s linear infinite;
+            }
+            div.layer6 {
+                background: url(imgs/parallax/layer_06.png) repeat-x;
+                z-index:3;
+                animation: animparallax 60s linear infinite;
+            }
+            div.layer5 {
+                background: url(imgs/parallax/layer_05.png) repeat-x;
+                z-index:4;
+                animation: animparallax 50s linear infinite;
+            }
+            div.layer4 {
+                background: url(imgs/parallax/layer_04.png) repeat-x;
+                z-index:5;
+                animation: animparallax 40s linear infinite;
+            }
+            div.layer3 {
+                background: url(imgs/parallax/layer_03.png) repeat-x;
+                z-index:6;
+                animation: animparallax 30s linear infinite;
+            }
+            div.layer2 {
+                background: url(imgs/parallax/layer_02.png) repeat-x;
+                z-index:7;
+                animation: animparallax 20s linear infinite;
+            }
+            div.layer1 {
+                background: url(imgs/parallax/layer_01.png) repeat-x;
+                z-index:8;
+                animation: animparallax 10s linear infinite;
+            }
+            figure.parallax div.runner {
+                background: url(imgs/parallax/running.gif) no-repeat;
+                background-size: contain;
+                bottom: 120px;
+                height: 100px;
+                left: 50%;
+                width: 100px;
+                transform: translateX(-50%);
+                z-index: 9;
+            }
+            @media (max-width:1340px) {
+                figure.parallax {
+                    width: 800px;
+                }
+            } @media (max-width:960px) {
+                figure.parallax {
+                    width: 400px;
+                }
+            }
+           
+            @keyframes animparallax {
+                100% {background-position: -2048px;}
+            }
+
+
+
+        </style>
+</head>
+<body>
+    <main>
+        <header>
+            <H1><a href="INDEX.HTML">⬅</a>PARALLAX</H1>
+            
+            
+        </header>
+        <section>
+<figure  class="parallax">
+        <div class="layer8"></div>
+        <div class="layer7"></div>
+        <div class="layer6"></div>
+        <div class="layer5"></div>
+        <div class="layer4"></div>
+        <div class="layer3"></div>
+        <div class="layer2"></div>
+        <div class="layer1"></div>
+        <div class="runner"></div>
+</figure>
+        </section>
+    </main>
+</body>
+</html>
