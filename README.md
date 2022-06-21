@@ -10,7 +10,10 @@ repositorio de analisis y desarrollo de sistemas de informacion (ADSI)
  | THEMES | description | link 
  | --- | --- | --- |
  | 1. emmet | improves woekflow in HTML/CSS | [open](01-emmet) |
- | 2. HTML | MARKUP LANGUAGE (STRUCTURE) | [OPEN](01-HTML) |
+ | 2. HTML | MARKUP LANGUAGE (STRUCTURE) | [OPEN](02-HTML) |
  | 3. CSS | STYLE SHEETS (PRESENTATION) | [OPEN](03-CSS) |
- | 4. JAVASCRIPT | PROGRAMING LANGUAGE (CLIEN-SIDE) | [OPEN](04-JAVASCRIPT) |
+ | 4. CSS3 | STYLE SHEETS (PRESENTATIONS) | [OPEN](04-css3/) |
+ | 5. PUG | PREPOCESSOR (HTML) | [OPEN](05-PUG/)|
+ | 6. SASS | PREPOCESSOR (CSS) | [OPEN](06-SASS/)|
+ | 7. JAVASCRIPT| PROGRAMING LANGUAGE (CLIEN-SIDE) | [OPEN](07-JAVASCRIPT/)|
 
