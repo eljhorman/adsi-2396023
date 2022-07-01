@@ -2,28 +2,29 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Mixins (SCSS)</title>
+	<title>challenege (SCSS)</title>
 	<link rel="stylesheet" href="css/master.css">
-	<link rel="stylesheet" href="css/09-mixins.css">
+	<link rel="stylesheet" href="css/10-challenge.css">
 </head>
 <body>
-	<main>
-		<header class="header">
-			<h1 class="h1">
-				<a href="#" class="a">challenge</a>
-		</h1>
-			<button class="button">
-				svg
-			</button>
-				<nav class="nav">
-					<ul class="ul">
-                    <li class="li"><a href="#" class="a">item1</a></li>
-                    <li class="li"><a href="#" class="a">item2</a></li>
-                    <li class="li"><a href="#" class="a">item3</a></li>
-                    <li class="li"><a href="#" class="a">item4</a></li>
-                    <li class="li"><a href="#" class="a">item666</a></li>
-            </ul>  
-            </nav>   
-            </header>   
+	
+	<nav class="nav">
+
+		<div class="nav_container">
+
+			<h1 class="nav_logo">challenge</h1>
+			
+			<label for="menu" class="nav_label">
+				<img src="scss/menu.svg" class="nav_img">
+			</label>
+			<input type="checkbox" id="menu" class="nav_input">
+
+			<div class="nav_menu">
+				<a href="#" class="nav_item">Inicio</a>
+				<a href="#" class="nav_item">Acerca de</a>
+				<a href="#" class="nav_item">Contacto</a>
+			</div>
+		</div>
+	</nav>
 </body>
 </html>
