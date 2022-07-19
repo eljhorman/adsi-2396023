@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEMPLATE</title>
+    <LINK rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+    <main>
+        <header>
+            <H1><a href="index.html">⬅</a>TEMPLATE</H1>
+            
+        </header>
+        <section>
+            <h2 class="today"> today </h2>
+        </section>
+    </main>
+    <script>
+        // this is a comment line 
+        /*this is a comment multi-line
+        or block comment */
+
+        const today = document.getElementById('today')
+        var ndate = new Date
+        console.log(ndate)
+        today.textContent = `today si: ${ndate.getDate()}-${ndate.getMonth()+1}-${ndate.getFullYear
+        ()}`
+    </script>
+</body>
+</html>
