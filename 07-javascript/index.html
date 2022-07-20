@@ -4,80 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript</title>
+    <title>Main Menu (javascript)</title>
     <link rel="stylesheet" href="css/menu.css">
 </head>
-<body> 
+<body>
     <main>
         <header>
-            <h1>JavaScript</h1>
-            
+            <h1>Main Menu (javascript)</h1>
         </header>
         <nav class="menu">
-            </nav>
-           
+
+        </nav>
     </main>
     <script>
-        const menu = document.querySelector('.menu')
+        const menu  = document.querySelector('.menu')
         const links = [
             {
                 url: '01-write.html',
-                text: 'write'
+                text: 'Write'
             },
             {
                 url: '02-comments.html',
-                text: 'comments'
+                text: 'Comments'
             },
             {
                 url: '03-get-elements.html',
-                text: 'get elements'
+                text: 'Get Elements'
             },
             {
                 url: '04-variables.html',
-                text: 'variables'
+                text: 'Variables'
             },
             {
                 url: '05-methods-object.html',
-                text: 'methods-object'
+                text: 'Methods Object'
             },
             {
                 url: '06-types-objects.html',
-                text: 'types-objects'
+                text: 'Types Objects'
             },
             {
                 url: '07-vehicle-object.html',
-                text: 'vehicle-object'
+                text: 'Vehicle Object'
             },
             {
                 url: '08-functions.html',
-                text: 'functions'
+                text: 'Functions'
             },
             {
                 url: '09-challenge-calculator.html',
-                text: 'challenge-calculator'
+                text: 'Challenge Calculator'
             },
             {
                 url: '10-operators-arithmetic.html',
-                text: 'operators-arithmetic'
+                text: 'Operators Arithmetic'
             },
             {
                 url: '11-operators-assignment.html',
-                text: 'operators-assignement'
+                text: 'Operators assignment'
             },
             {
                 url: '12-operators-comparison.html',
-                text: 'operators-conparison'
+                text: 'Operators comparison'
             },
             {
                 url: '13-operators-logical.html',
-                text: 'operators-logical'
+                text: 'Operators logical'
             },
             {
                 url: '14-conditionals.html',
                 text: 'conditionals'
             },
             {
-                url: '15-challenge-conditionals.html',
+                url: '15-challenge-conditionals.htmll',
                 text: 'challenge-conditionals'
             },
             {
@@ -110,15 +109,15 @@
             },
             {
                 url: '23-methods-dates.html',
-                text: 'methods-dates'
+                text: 'methods dates'
             },
             {
                 url: '24-methods-arrays.html',
-                text: 'methods-arrays'
+                text: 'methods arrays'
             },
             {
                 url: '25-challenge-arrays.html',
-                text: 'challenge-arrays'
+                text: 'challenge arrays'
             },
             {
                 url: '26-events-time.html',
@@ -126,17 +125,15 @@
             },
             {
                 url: '27-challenge-events-time.html',
-                text: 'chalenge-events'
+                text: 'challenge events time'
             },
             {
                 url: '28-pop-up-windows.html',
-                text: 'pop-up-windows'
+                text: 'pop up windows'
             },
-
         ]
         links.forEach(function (item, index) {
-            menu.innerHTML += `<li><a href='$ {item.url}'> <i> ${index+1}
-                </i> ${item.text} </a></li>`
+            menu.innerHTML += `<li><a href='${item.url}'> <i> ${index+1} </i> ${item.text} </a></li>`
         })
     </script>
 </body>
