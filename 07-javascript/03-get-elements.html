@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get-elements</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <style>
+        nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        nav button {
+            background-color: rgb(0, 0, 0);
+            color: aqua;
+            border: none;
+            font-family: Poppins;
+            width: 100px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                Get-elements
+            </h1>
+        </header>
+        <section>
+            <h2 id="show-year"></h2>
+            <ul>
+            <li>5-27</li>
+            <li>L7Lunes</li>
+            <li>A-Z</li>
+            <li>crack-family</li>
+            </ul>
+            <h2 id="show-pks"></h2>
+            <p class="paragraph">lorem ipsum dolor</p>
+            <p class="paragraph">lorem ipsum dolor</p>
+            <h2 id="show-prs"></h2>
+            
+            <nav>
+                <button class="btn btn1">button 1</button>
+                <button class="btn btn2">button 2</button>
+                <button class="btn btn3">button 3</button>
+            </nav>
+
+        </section>
+    </main>
+    <script>
+        // change DOM (document object model)
+        /* getelementbyid*/
+        const show_year = document.getElementById('show-year')
+        const show_pks = document.getElementById('show-pks')
+        const show_prs = document.getElementById('show-prs')
+        let today = new Date
+         show_year.textContent = `Current Year: ${today.getFullYear()}`
+        
+        const num_pks = document.getElementsByTagName('li')
+        show_pks.textContent = `Hay ${num_pks.length} Rapers & `
+        show_pks.textContent += `el ultimo raper es: ${num_pks[num_pks.length-1].textContent}`
+        const num_prs = document.getElementsByClassName('paragraph')
+        num_prs[num_prs.length-1].style.color = 'red'
+        show_prs.textContent = `Paragraph contain class: ${num_prs[0].className} `
+        const btn1 = document.querySelector('button.btn1')
+        const all_btns = document.querySelectorAll('button.btn')
+        btn1.style.backgroundColor = 'red'
+
+        all_btns[0].style.borderRadius = '10px'
+        all_btns[1].style.borderRadius = '10px'
+        all_btns[2].style.borderRadius = '10px'
+    </script>
+</body>
+</html>
