@@ -163,6 +163,8 @@
             height: 58px;
             width: 100px;
             transition: transform 0.2s ease-in;
+            z-index: 9;
+            position: relative;
         }
         figure.landscape button.prev:is(:hover) {
             transform: translateX(-5px);
@@ -179,6 +181,7 @@
         figure.landscape img.car {
             position: relative;
             bottom: -52px;
+            z-index: 9;
         }
         div.methods {
             margin: 44px auto 0 auto;
@@ -249,6 +252,57 @@
             0%, 100% { transform: translateY(0); }
             5%       { transform: translateY(-4px); }
         }
+        figure.parallax {
+            margin: 0 auto;
+            position: absolute;
+            overflow: hidden;
+            height: 226px;
+            width: 375px;
+            border-radius: 20px;
+            left: 65px;
+            bottom: 130px;
+        }
+
+        figure.parallax div {
+            position: absolute;
+            top: 2px;
+            left: 0;
+            height: 256px;
+            width: 438px;
+        }
+
+        figure.parallax div.layer1 {
+            background: url(imgs/bg-vehicles/layer1.svg) repeat-x;
+            z-index: 3;
+        }
+        figure.parallax div.layer2 {
+            background: url(imgs/bg-vehicles/layer2.svg) repeat-x;
+            z-index: 2;
+        }
+        figure.parallax div.layer3 {
+            background: url(imgs/bg-vehicles/layer3.svg) repeat-x;
+            z-index: 1;
+        }
+        figure.parallax.play div.layer1 {
+            animation: 3s animLayers linear infinite;
+        }
+        figure.parallax.play div.layer2 {
+            animation: 12s animLayers linear infinite;
+        }
+        figure.parallax.play div.layer3 {
+            animation: 24s animLayers linear infinite;
+        }
+        @keyframes animLayers {
+            100% {
+                background-position:  -720px;
+            }
+        }
+        figure.parallax.play.stop div.layer1,
+        figure.parallax.play.stop div.layer2,
+        figure.parallax.play.stop div.layer3 {
+            animation-play-state: paused;
+        }
+
     </style>
 </head>
 <body>
@@ -272,6 +326,12 @@
                 <div class="model"></div>
                 <div class="color"></div>
             </div>
+            <figure class="parallax">
+                <div class="layer1"></div>
+                <div class="layer2"></div>
+                <div class="layer3"></div>
+                
+            </figure>
             <figure class="landscape">
                 <button class="prev"></button>
                 <img src="" class="car">
@@ -308,9 +368,11 @@
 
         const btn_prev = document.querySelector('.prev')
         const btn_next = document.querySelector('.next')
+        const parallax = document.querySelector('.parallax')
 
         // Logic 
         var engine = false
+        var moveon = false
 
         // Array Object
         const vehicles = [
@@ -330,7 +392,8 @@
                 }
                
         ]
-        class Vehicle {
+         
+class Vehicle {
             constructor(brand, refer, model, color, image) {
                 this.brand = brand
                 this.refer = refer
@@ -347,16 +410,21 @@
                 e_image.setAttribute('src', this.image)
             }
             static startEngine() {
-                if (!engine) {
-                    e_image.classList.add('on')
-                    engine = true
-                }
+                e_image.classList.add('on')
+                engine = true
             }
             static offEngine() {
-                if(engine) {
-                    e_image.classList.remove('on')
-                    engine = false
-                }
+                e_image.classList.remove('on')
+                engine = false
+            }
+            static goForward() {
+                parallax.classList.add('play')
+                parallax.classList.remove('stop')
+                moveon = true
+            }
+            static stopCar() {
+                parallax.classList.add('stop')
+                moveon = false
             }
         }
         // Actions
@@ -366,26 +434,36 @@
             main.classList.toggle('dark')
         })
         btn_on.addEventListener('click', (event) => {
-            removeActives()
-            Vehicle.startEngine()
-            btn_on.classList.add('active')
+            if (!engine) {
+                removeActives()
+                Vehicle.startEngine()
+                btn_on.classList.add('active')
+            }
         })
         btn_fw.addEventListener('click', (event) => {
-            removeActives()
-            btn_fw.classList.add('active')
+            if (engine) {
+                removeActives()
+                Vehicle.goForward()
+                btn_fw.classList.add('active')
+            }
         })
         btn_stop.addEventListener('click', (event) => {
-            removeActives()
-            btn_stop.classList.add('active')
+            if (moveon) {
+                removeActives()
+                Vehicle.stopCar()
+                btn_stop.classList.add('active')
+            }
         })
         btn_bw.addEventListener('click', (event) => {
             removeActives()
             btn_bw.classList.add('active')
         })
         btn_off.addEventListener('click', (event) => {
-            removeActives()
-            Vehicle.offEngine()
-            btn_off.classList.add('active')
+            if (engine && !moveon) {
+                removeActives()
+                Vehicle.offEngine()
+                btn_off.classList.add('active')
+            }
         })
         btn_prev.addEventListener('click', (event) => {
             if (index_attr > 0) {
