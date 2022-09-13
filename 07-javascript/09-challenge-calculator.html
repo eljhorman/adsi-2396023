@@ -4,8 +4,146 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>Challenge Calc</title>
     <link rel="stylesheet" href="css/menu.css">
+    <style>
+        main.light {
+            background: url(imgs/calculadora/dia.svg) no-repeat center;
+        }
+        main.light header button.mode{
+            background: url(imgs/calculadora/Group\ 22.svg)no-repeat center;
+            
+        }
+        main {
+            background: url(imgs/calculadora/fondo\ oscuro.svg) no-repeat center;
+            transition: background 0.5s ease-in;
+        }
+        
+        header button.mode {
+            border: none;
+            background: url(imgs/calculadora/dia\ noche.svg) no-repeat center;
+            height: 30px;
+            display: block;
+            margin: 0 auto;
+            transition: all 0.2s ease-in;
+            width: 110px;
+            
+        }
+        header button.mode:is(:hover, :focus) {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+        div.display {
+            background: url(imgs/calculadora/Rectangle\ 2.svg) no-repeat center;
+            position: relative;
+            height: 70px;
+            
+            display: flex;
+            flex-direction: column;
+            margin: 10px 115px;
+            text-align: center;
+        }
+        div.display output.operation {
+            font-weight: 275;
+            font-size: 28px;
+            color: #6E768A;
+        }
+        div.display output.result {
+            font-weight: 275;
+            font-size: 54px;
+            color: #B6B9C7;
+        }
+        div.buttons {
+            display: grid;
+            gap: 1px;
+            margin-top: 60px;
+            justify-content: center;
+            grid-template-columns: repeat(4, 48px);
+            grid-template-rows: repeat(5, 48px);
+        }
+        div.buttons button {
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s ease-in;
+        }
+        div.buttons button.clear {
+            background: url(imgs/calculadora/borrar.svg) no-repeat center;
+        }
+        div.buttons button.back {
+            background: url(imgs/calculadora/atras.svg) no-repeat center;
+        }
+        div.buttons button.pow {
+            background: url(imgs/calculadora/arriba\ jaja.svg) no-repeat center;
+        }
+        div.buttons button.div {
+            background: url(imgs/calculadora/dividir.svg) no-repeat center;
+        }
+        div.buttons button.seven {
+            background: url(imgs/calculadora/7.svg) no-repeat center;
+        }
+        
+        
+        div.buttons button.eight {
+            background: url(imgs/calculadora/8.svg) no-repeat center;
+        }
+        div.buttons button.nueve {
+            background: url(imgs/calculadora/9.svg) no-repeat center;
+        }
+        div.buttons button.multiplicacion {
+            background: url(imgs/calculadora/multiplicacion.svg) no-repeat center;
+        }
+        div.buttons button.cuatro {
+            background: url(imgs/calculadora/4.svg) no-repeat center;
+        }
+        
+        div.buttons button.cinco {
+            background: url(imgs/calculadora/5.svg) no-repeat center;
+        }
+        div.buttons button.seis {
+            background: url(imgs/calculadora/6.svg) no-repeat center;
+        }
+        div.buttons button.menos {
+            background: url(imgs/calculadora/-.svg) no-repeat center;
+        }
+        div.buttons button.uno {
+            background: url(imgs/calculadora/1.svg) no-repeat center;
+        }
+        div.buttons button.dos {
+            background: url(imgs/calculadora/2.svg) no-repeat center;
+        }
+        div.buttons button.tres {
+            background: url(imgs/calculadora/3.svg) no-repeat center;
+        }
+        div.buttons button.mas {
+            background: url(imgs/calculadora/+.svg) no-repeat center;
+        }
+        div.buttons button.cero {
+            background: url(imgs/calculadora/0.svg) no-repeat center;
+            width: 100px;
+        }
+        div.buttons button.punto {
+            background: url(imgs/calculadora/punto.svg) no-repeat center;
+            
+        }
+        div.buttons button.igual {
+            background: url(imgs/calculadora/Group\ 21.svg) no-repeat center;
+        }
+        
+        button.punto {
+            position: relative;
+            left: 50px;
+            margin-top: -7px;
+        }
+        button.igual {
+            position: relative;
+            left: 50px;
+            margin-top: -7px;
+        }
+        
+        div.buttons button:is(:hover, :focus) {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
     <main>
@@ -16,14 +154,76 @@
                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
                     </svg>
                 </a>
-                Template
             </h1>
+            <button class="mode"></button>
         </header>
         <section>
-
+            <div class="display">
+                <output class="operation"></output>
+                <output class="result"></output>
+            </div>
+            <div class="buttons">
+                <button class="clear"></button>
+                <button class="back"></button>
+                <button class="pow" data-opr="**"></button>
+                <button class="div" data-opr="/"></button>
+                <button class="seven" data-num="7"></button>
+                <button class="eight" data-num="8"></button>
+                <button class="nueve" data-num="9"></button>
+                <button class="multiplicacion" data-opr="*"></button>
+                <button class="cuatro" data-num="4"></button>
+                <button class="cinco" data-num="5"></button>
+                <button class="seis" data-num="6"></button>
+                <button class="menos" data-opr="-"></button>
+                <button class="uno" data-num="1"></button>
+                <button class="dos" data-num="2"></button>
+                <button class="tres" data-num="3"></button>
+                <button class="mas" data-opr="+"></button>
+                <button class="cero" data-num="0"></button>
+                <button class="punto" data-opr="."></button>
+                <button class="igual"></button>
+                
+            </div>
         </section>
     </main>
     <script>
+        const mode = document.querySelector('.mode')
+        const main = document.querySelector('main')
+        const oper = document.querySelector('.operation')
+        const clear = document.querySelector('.clear')
+
+
+        const nums = document.querySelectorAll('button[data-num]')
+        const oprs = document.querySelectorAll('button[data-opr]')
+
+        var operStatus = false
+
+        nums.forEach(element => {
+            element.addEventListener('click', () =>{
+                if (oper.textContent.length < 14){
+                oper.textContent += element.getAttribute('data-num')
+                operStatus= true    
+      
+                }
+            })
+        })
+        oprs.forEach(element => {
+            element.addEventListener('click', ()=> {
+                if (oper.textContent.length < 14){
+                    if(operStatus) {
+                oper.textContent += element.getAttribute('data-opr')
+                operStatus = false
+                    }
+                }
+            })
+        })
+        clear.addEventListener('click', () => {
+            oper.textContent = ''
+        })
+
+        mode.addEventListener('click',()=>{
+            main.classList.toggle('light')
+        })
 
     </script>
 </body>
