@@ -7,19 +7,15 @@
     <title>Challenge Calc</title>
     <link rel="stylesheet" href="css/menu.css">
     <style>
-        main.light {
-            background: url(imgs/calculadora/dia.svg) no-repeat center;
-        }
-        main.light header button.mode{
-            background: url(imgs/calculadora/Group\ 22.svg)no-repeat center;
-            
-        }
-        main {
-            background: url(imgs/calculadora/fondo\ oscuro.svg) no-repeat center;
-            transition: background 0.5s ease-in;
-        }
         
-        header button.mode {
+         #appBg form{
+            height: 100%;
+            width: 100%;
+            background-color: black;
+         }
+       
+        
+        header button.mode{
             border: none;
             background: url(imgs/calculadora/dia\ noche.svg) no-repeat center;
             height: 30px;
@@ -27,121 +23,52 @@
             margin: 0 auto;
             transition: all 0.2s ease-in;
             width: 110px;
-            
-        }
-        header button.mode:is(:hover, :focus) {
             cursor: pointer;
-            transform: scale(1.05);
-        }
-        div.display {
-            background: url(imgs/calculadora/Rectangle\ 2.svg) no-repeat center;
-            position: relative;
-            height: 70px;
             
-            display: flex;
-            flex-direction: column;
-            margin: 10px 115px;
-            text-align: center;
         }
-        div.display output.operation {
-            font-weight: 275;
-            font-size: 28px;
-            color: #6E768A;
+        
+         input[type=textfield]{
+            width: 100%;
+            cursor: default;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: rgb(37, 16, 16);
+            color: white;
+            
+            border-radius: 10%;
+            text-align: right;
+            font-size: 50px;
+            border: 0;
+            outline: none;
         }
-        div.display output.result {
-            font-weight: 275;
-            font-size: 54px;
-            color: #B6B9C7;
+        
+        
+        input[type=button]{
+            
+            width: 22%;
+            font-size: 26px;
+            cursor: pointer;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            padding: 18px;
+            margin: 3px;
+            margin-top: 2px;
+            border-radius: 10%;
+            border: 0;
+            
+            
         }
-        div.buttons {
-            display: grid;
-            gap: 1px;
-            margin-top: 60px;
+        input[type=reset]{
+            display: inline-block;
+            width: 22%;
+            font-size: 26px;
+            padding: 18px;
+            margin: 3px;
+            border-radius: 10%;
+            margin-top: 2px;
             justify-content: center;
-            grid-template-columns: repeat(4, 48px);
-            grid-template-rows: repeat(5, 48px);
-        }
-        div.buttons button {
             cursor: pointer;
             border: none;
-            transition: all 0.2s ease-in;
-        }
-        div.buttons button.clear {
-            background: url(imgs/calculadora/borrar.svg) no-repeat center;
-        }
-        div.buttons button.back {
-            background: url(imgs/calculadora/atras.svg) no-repeat center;
-        }
-        div.buttons button.pow {
-            background: url(imgs/calculadora/arriba\ jaja.svg) no-repeat center;
-        }
-        div.buttons button.div {
-            background: url(imgs/calculadora/dividir.svg) no-repeat center;
-        }
-        div.buttons button.seven {
-            background: url(imgs/calculadora/7.svg) no-repeat center;
-        }
-        
-        
-        div.buttons button.eight {
-            background: url(imgs/calculadora/8.svg) no-repeat center;
-        }
-        div.buttons button.nueve {
-            background: url(imgs/calculadora/9.svg) no-repeat center;
-        }
-        div.buttons button.multiplicacion {
-            background: url(imgs/calculadora/multiplicacion.svg) no-repeat center;
-        }
-        div.buttons button.cuatro {
-            background: url(imgs/calculadora/4.svg) no-repeat center;
-        }
-        
-        div.buttons button.cinco {
-            background: url(imgs/calculadora/5.svg) no-repeat center;
-        }
-        div.buttons button.seis {
-            background: url(imgs/calculadora/6.svg) no-repeat center;
-        }
-        div.buttons button.menos {
-            background: url(imgs/calculadora/-.svg) no-repeat center;
-        }
-        div.buttons button.uno {
-            background: url(imgs/calculadora/1.svg) no-repeat center;
-        }
-        div.buttons button.dos {
-            background: url(imgs/calculadora/2.svg) no-repeat center;
-        }
-        div.buttons button.tres {
-            background: url(imgs/calculadora/3.svg) no-repeat center;
-        }
-        div.buttons button.mas {
-            background: url(imgs/calculadora/+.svg) no-repeat center;
-        }
-        div.buttons button.cero {
-            background: url(imgs/calculadora/0.svg) no-repeat center;
-            width: 100px;
-        }
-        div.buttons button.punto {
-            background: url(imgs/calculadora/punto.svg) no-repeat center;
-            
-        }
-        div.buttons button.igual {
-            background: url(imgs/calculadora/Group\ 21.svg) no-repeat center;
-        }
-        
-        button.punto {
-            position: relative;
-            left: 50px;
-            margin-top: -7px;
-        }
-        button.igual {
-            position: relative;
-            left: 50px;
-            margin-top: -7px;
-        }
-        
-        div.buttons button:is(:hover, :focus) {
-            transform: scale(1.1);
+            transition: all 0.2s ease-in;  
         }
     </style>
 </head>
@@ -153,78 +80,43 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
                     </svg>
-                </a>
-            </h1>
-            <button class="mode"></button>
-        </header>
-        <section>
-            <div class="display">
-                <output class="operation"></output>
-                <output class="result"></output>
-            </div>
-            <div class="buttons">
-                <button class="clear"></button>
-                <button class="back"></button>
-                <button class="pow" data-opr="**"></button>
-                <button class="div" data-opr="/"></button>
-                <button class="seven" data-num="7"></button>
-                <button class="eight" data-num="8"></button>
-                <button class="nueve" data-num="9"></button>
-                <button class="multiplicacion" data-opr="*"></button>
-                <button class="cuatro" data-num="4"></button>
-                <button class="cinco" data-num="5"></button>
-                <button class="seis" data-num="6"></button>
-                <button class="menos" data-opr="-"></button>
-                <button class="uno" data-num="1"></button>
-                <button class="dos" data-num="2"></button>
-                <button class="tres" data-num="3"></button>
-                <button class="mas" data-opr="+"></button>
-                <button class="cero" data-num="0"></button>
-                <button class="punto" data-opr="."></button>
-                <button class="igual"></button>
                 
-            </div>
-        </section>
-    </main>
-    <script>
-        const mode = document.querySelector('.mode')
-        const main = document.querySelector('main')
-        const oper = document.querySelector('.operation')
-        const clear = document.querySelector('.clear')
+           
+        </a>
+        
+    
+    <button class="mode"></button>
+    
+    
 
-
-        const nums = document.querySelectorAll('button[data-num]')
-        const oprs = document.querySelectorAll('button[data-opr]')
-
-        var operStatus = false
-
-        nums.forEach(element => {
-            element.addEventListener('click', () =>{
-                if (oper.textContent.length < 14){
-                oper.textContent += element.getAttribute('data-num')
-                operStatus= true    
-      
-                }
-            })
-        })
-        oprs.forEach(element => {
-            element.addEventListener('click', ()=> {
-                if (oper.textContent.length < 14){
-                    if(operStatus) {
-                oper.textContent += element.getAttribute('data-opr')
-                operStatus = false
-                    }
-                }
-            })
-        })
-        clear.addEventListener('click', () => {
-            oper.textContent = ''
-        })
-
-        mode.addEventListener('click',()=>{
-            main.classList.toggle('light')
-        })
-
-    </script>
+</header>
+<section>
+    <div id="appBg"></div>
+    <form name="calculadora">
+        
+            
+                <input type="textfield" name="ans" value="" autocomplete="off" readonly>
+                <input type="button" value="7" onclick="document.calculadora.ans.value+='7'">
+                <input type="button" value="8" onclick="document.calculadora.ans.value+='8'">
+                <input type="button" value="9" onclick="document.calculadora.ans.value+='9'">
+                <input type="button" value="+" onclick="document.calculadora.ans.value+='+'">
+                <br>
+                <input type="button" value="4" onclick="document.calculadora.ans.value+='4'">
+                <input type="button" value="5" onclick="document.calculadora.ans.value+='5'">
+                <input type="button" value="6" onclick="document.calculadora.ans.value+='6'">
+                <input type="button" value="-" onclick="document.calculadora.ans.value+='-'">
+                <br>
+                <input type="button" value="1" onclick="document.calculadora.ans.value+='1'">
+                <input type="button" value="2" onclick="document.calculadora.ans.value+='2'">
+                <input type="button" value="3" onclick="document.calculadora.ans.value+='3'">
+                <input type="button" value="x" onclick="document.calculadora.ans.value+='*'">
+                <br>
+                <input type="button" value="0" onclick="document.calculadora.ans.value+='0'">
+                <input type="reset" value="c">
+                <input type="button" value="=" onclick="document.calculadora.ans.value=eval(document.calculadora.ans.value)">
+                <input type="button" value="/" onclick="document.calculadora.ans.value+='/'"">
+            </form>
+           </div>
+        
 </body>
 </html>
