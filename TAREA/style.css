@@ -1,0 +1,46 @@
+*  { 
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+    
+    }
+
+#contenido{
+    display: grid;
+    font-family: sans-serif;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    padding: 15px;
+
+}
+
+.card{
+    width: 300px;
+}
+
+.card-group{
+    margin: 0 auto;
+}
+
+.card a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    background-color: aqua;
+    color: blueviolet;
+}
+
+   
+@media screen and(max-width: 1270px){
+    #contenido{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .card-group{
+        width: 450px;
+    }
+    .card img{
+        width: 100%;
+
+    }
+}
